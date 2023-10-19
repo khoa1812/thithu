@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let index = +prompt('Nhập vị trí index');
+    let x = +prompt('Nhập số nguyên x');
+    let a = [1, 2, 3, 4];
+    function insertNumberToArray(a,index,x) {
+        if (0 <= index && index < a.length) {
+            let b = [];
+            for (let i = 0; i < index; i++) {
+                b[i] = a[i];
+            }
+            b[index] = x;
+            for (let i = index; i < a.length; i++) {
+                b[i + 1] = a[i];
+            }
+            return b;
+        }
+        else {
+            return a;
+        }
+
+    }
+    let c = insertNumberToArray(a,index,x);
+    alert(c);
+</script>
+</body>
+</html>
